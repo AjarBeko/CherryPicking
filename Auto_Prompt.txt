@@ -1,0 +1,239 @@
+#ChatGPT-nek beadott prompt:
+
+Kérlek, generálj 100 rekordnyi szintetikus adatot az AUTO táblához az alábbi struktúra alapján:
+
+CREATE TABLE AUTO (
+    AutoId INT IDENTITY(1,1) PRIMARY KEY,
+    GyartasiEv NVARCHAR(10) NOT NULL,
+    Marka NVARCHAR(100) NOT NULL,
+    Modell NVARCHAR(20) NOT NULL,
+    Kivitel NVARCHAR(50) NOT NULL,
+    Motorcm3 NVARCHAR(10) NOT NULL,
+    Szarmazas NVARCHAR(50) NOT NULL
+);
+
+Követelmények:
+- A GyártásiÉvek legyenek változatosak és valósághűek
+- A Márkák legyenek változatosak és valósághűek
+- A Modellek legyenek változatosak és valósághűek
+- A Kivitelek legyenek változatosak és valósághűek
+- A Motorcm3 legyenek valósághűek
+- Az Származás legyenek  valósághűek
+
+Kérlek, a kimenet SQL INSERT utasítások formájában legyen, például:
+
+INSERT INTO AUTO (Marka, Modell, GyartasiEv, Kivitel, Motorcm3, Szarmazas) 
+VALUES ('Skoda', 'Enyaq', 2024, 'SUV', '0', 'Csehország');
+
+#Azurba ez a rész került futtatásra:
+
+CREATE TABLE AUTO (
+    AutoId INT IDENTITY(1,1) PRIMARY KEY,
+    GyartasiEv NVARCHAR(10) NOT NULL,
+    Marka NVARCHAR(100) NOT NULL,
+    Modell NVARCHAR(20) NOT NULL,
+    Kivitel NVARCHAR(50) NOT NULL,
+    Motorcm3 NVARCHAR(10) NOT NULL,
+    Szarmazas NVARCHAR(50) NOT NULL
+);
+
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Toyota', 'Corolla', 'Sedan', '1800', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Ford', 'Focus', 'Hatchback', '1500', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Volkswagen', 'Golf', 'Hatchback', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Honda', 'Civic', 'Coupe', '1600', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'BMW', 'X5', 'SUV', '3000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Audi', 'A4', 'Sedan', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Hyundai', 'Tucson', 'SUV', '1600', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Kia', 'Sportage', 'SUV', '1800', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Mercedes-Benz', 'C-Class', 'Sedan', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Peugeot', '208', 'Hatchback', '1200', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Renault', 'Clio', 'Hatchback', '1200', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Skoda', 'Octavia', 'Sedan', '2000', 'Csehország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Seat', 'Ibiza', 'Hatchback', '1400', 'Spanyolország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Mazda', 'CX-5', 'SUV', '2200', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Tesla', 'Model 3', 'Sedan', 'Electric', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Volvo', 'XC60', 'SUV', '2500', 'Svédország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Suzuki', 'Swift', 'Hatchback', '1200', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Fiat', '500', 'Coupe', '900', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Jaguar', 'XF', 'Sedan', '3000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Chevrolet', 'Malibu', 'Sedan', '2500', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Nissan', 'Qashqai', 'SUV', '1600', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Opel', 'Corsa', 'Hatchback', '1200', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Dacia', 'Duster', 'SUV', '1600', 'Románia');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Land Rover', 'Defender', 'SUV', '3000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Alfa Romeo', 'Giulia', 'Sedan', '2000', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Subaru', 'Outback', 'Wagon', '2500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Citroën', 'C4', 'Hatchback', '1500', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Lexus', 'RX', 'SUV', '3500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Jeep', 'Wrangler', 'SUV', '2800', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Mitsubishi', 'Outlander', 'SUV', '2400', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Mini', 'Cooper', 'Hatchback', '1500', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Porsche', 'Cayenne', 'SUV', '3000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Rolls-Royce', 'Phantom', 'Sedan', '6700', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Bentley', 'Continental', 'Coupe', '6000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Maserati', 'Ghibli', 'Sedan', '3000', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Aston Martin', 'DB11', 'Coupe', '5200', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Ferrari', '488', 'Coupe', '3900', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Lamborghini', 'Huracan', 'Coupe', '5200', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Bugatti', 'Chiron', 'Coupe', '8000', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'McLaren', '720S', 'Coupe', '4000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Toyota', 'Yaris', 'Hatchback', '1500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Ford', 'Mustang', 'Coupe', '5000', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Peugeot', '3008', 'SUV', '1600', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Mazda', 'MX-5', 'Roadster', '2000', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Volvo', 'S90', 'Sedan', '2000', 'Svédország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Honda', 'HR-V', 'SUV', '1500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Volkswagen', 'Passat', 'Sedan', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Renault', 'Megane', 'Coupe', '1400', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Toyota', 'RAV4', 'SUV', '2500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Kia', 'Ceed', 'Hatchback', '1600', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Nissan', 'Juke', 'SUV', '1500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Hyundai', 'Santa Fe', 'SUV', '2400', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Mazda', 'CX-3', 'SUV', '2000', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Peugeot', '508', 'Sedan', '1800', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Chevrolet', 'Equinox', 'SUV', '2000', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Subaru', 'Forester', 'SUV', '2500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'BMW', 'M3', 'Sedan', '3000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Audi', 'Q5', 'SUV', '2500', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Seat', 'Leon', 'Hatchback', '1400', 'Spanyolország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Skoda', 'Superb', 'Sedan', '2200', 'Csehország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Opel', 'Insignia', 'Sedan', '1600', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Volvo', 'V60', 'Wagon', '2000', 'Svédország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Ford', 'Escape', 'SUV', '1500', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Mercedes-Benz', 'GLA', 'SUV', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Dacia', 'Logan', 'Sedan', '1200', 'Románia');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Suzuki', 'Vitara', 'SUV', '1600', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Tesla', 'Model Y', 'SUV', 'Electric', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Lexus', 'ES', 'Sedan', '3000', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Jaguar', 'F-Pace', 'SUV', '3000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Alfa Romeo', 'Stelvio', 'SUV', '2000', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Mini', 'Countryman', 'SUV', '1500', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Jeep', 'Cherokee', 'SUV', '3200', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Porsche', 'Macan', 'SUV', '3000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Rolls-Royce', 'Ghost', 'Sedan', '6600', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Bentley', 'Bentayga', 'SUV', '6000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Maserati', 'Levante', 'SUV', '3000', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Aston Martin', 'Vantage', 'Coupe', '4000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Ferrari', 'Roma', 'Coupe', '3900', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Lamborghini', 'Urus', 'SUV', '4000', 'Olaszország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Bugatti', 'Divo', 'Coupe', '8000', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'McLaren', 'GT', 'Coupe', '4000', 'Egyesült Királyság');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Honda', 'Fit', 'Hatchback', '1500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Toyota', 'Highlander', 'SUV', '3500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Volkswagen', 'Arteon', 'Sedan', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Renault', 'Kadjar', 'SUV', '1600', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Ford', 'Puma', 'SUV', '1000', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Peugeot', '3008', 'SUV', '1600', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Hyundai', 'Ioniq', 'Hatchback', 'Electric', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Toyota', 'Camry', 'Sedan', '2500', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Audi', 'A7', 'Sportback', '3000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'BMW', 'X2', 'SUV', '2000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Mazda', 'MX-5', 'Convertible', '2000', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Honda', 'CR-V', 'SUV', '2400', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2020', 'Volkswagen', 'T-Cross', 'SUV', '1000', 'Németország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Subaru', 'Impreza', 'Hatchback', '2000', 'Japán');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2021', 'Kia', 'Sportage', 'SUV', '1600', 'Dél-Korea');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2022', 'Tesla', 'Model S', 'Sedan', 'Electric', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2018', 'Renault', 'Zoe', 'Hatchback', 'Electric', 'Franciaország');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2023', 'Jeep', 'Compass', 'SUV', '1400', 'USA');
+INSERT INTO AUTO (GyartasiEv, Marka, Modell, Kivitel, Motorcm3, Szarmazas)
+VALUES ('2019', 'Chevrolet', 'Traverse', 'SUV', '3600', 'USA');

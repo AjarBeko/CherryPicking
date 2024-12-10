@@ -1,0 +1,138 @@
+#ChatGPT-nek beadott prompt:
+
+Kérlek, generálj 100 rekordnyi szintetikus adatot az AUTO táblához az alábbi struktúra alapján:
+
+CREATE TABLE CIM (
+    CimID INT IDENTITY(1,1) PRIMARY KEY,
+    Utca NVARCHAR(100) NOT NULL,
+    Hazszam NVARCHAR(20) NOT NULL,
+    Varos NVARCHAR(50) NOT NULL,
+    Iranyitoszam NVARCHAR(10) NOT NULL,
+    Orszag NVARCHAR(50) NOT NULL
+);
+
+Követelmények:
+- Az utcák legyenek változatosak és valósághûek
+- A házszámok legyenek változatosak és valósághûek
+- A városok legyenek változatosak és valósághûek
+- Az Irányitószámok legyenek változatosak és valósághûek
+- Az Országok legyenek változatosak és valósághûek
+
+Kérlek, a kimenet SQL INSERT utasítások formájában legyen, például:
+
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag)
+VALUES ('Gárdonyi Géza utca', '33', 'Aszód', '2170', 'Magyarország');
+
+
+#Azurba ez a rész került futtatásra:
+
+CREATE TABLE CIM (
+    CimID INT IDENTITY(1,1) PRIMARY KEY,
+    Utca NVARCHAR(100) NOT NULL,
+    Hazszam NVARCHAR(20) NOT NULL,
+    Varos NVARCHAR(50) NOT NULL,
+    Iranyitoszam NVARCHAR(10) NOT NULL,
+    Orszag NVARCHAR(50) NOT NULL
+);
+
+
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '10', 'Székesfehérvár', '7794', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '138', 'Kecskemét', '7240', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '84', 'Székesfehérvár', '8713', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '59', 'Miskolc', '5450', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '109', 'Kecskemét', '7853', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '191', 'Nyíregyháza', '5943', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '31', 'Kecskemét', '9756', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '154', 'Nyíregyháza', '3097', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '33', 'Miskolc', '1137', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '114', 'Debrecen', '4763', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '119C', 'Budapest', '1677', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '120', 'Debrecen', '2610', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '133', 'Pécs', '6554', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '61', 'Debrecen', '6646', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '1', 'Pécs', '3464', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '22', 'Szeged', '8851', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '197', 'Szeged', '2656', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '195', 'Gyõr', '5730', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '107', 'Kecskemét', '5005', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '116', 'Budapest', '7908', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '200', 'Debrecen', '7933', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '170', 'Székesfehérvár', '1787', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '101', 'Miskolc', '4469', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '101', 'Nyíregyháza', '6030', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '47', 'Nyíregyháza', '9294', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '119', 'Pécs', '3547', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '181', 'Szombathely', '4601', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '160', 'Debrecen', '3373', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '52', 'Szombathely', '5424', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '111', 'Debrecen', '7113', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '2', 'Székesfehérvár', '9287', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '176', 'Szeged', '4521', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '50', 'Nyíregyháza', '3089', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '97', 'Szeged', '7814', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '1', 'Miskolc', '6503', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '186', 'Kecskemét', '6532', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '139', 'Szeged', '6448', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '198', 'Pécs', '6197', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '80', 'Szeged', '9903', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '101', 'Nyíregyháza', '5276', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '165', 'Szeged', '8194', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '88', 'Debrecen', '8422', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '170', 'Nyíregyháza', '5132', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '152', 'Szeged', '6373', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '112', 'Szeged', '8648', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '71', 'Pécs', '3491', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '159', 'Debrecen', '3095', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '65', 'Székesfehérvár', '5519', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '104', 'Gyõr', '5768', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '189', 'Székesfehérvár', '4462', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '16', 'Pécs', '4104', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '104', 'Kecskemét', '9296', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '119', 'Pécs', '6042', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '25', 'Miskolc', '7562', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '147', 'Debrecen', '7649', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '100B', 'Budapest', '6601', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '140', 'Nyíregyháza', '7078', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '108', 'Gyõr', '2343', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '12', 'Gyõr', '4394', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '187', 'Miskolc', '4339', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '13', 'Székesfehérvár', '4717', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '74', 'Debrecen', '5843', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '168A', 'Kecskemét', '2914', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '59', 'Miskolc', '1645', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '119B', 'Nyíregyháza', '7681', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '19', 'Szombathely', '7124', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '108', 'Budapest', '3359', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '107', 'Szombathely', '7197', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '198', 'Kecskemét', '6673', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '42', 'Kecskemét', '2586', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '93', 'Nyíregyháza', '4884', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '106', 'Szombathely', '2360', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Jókai Mór utca', '66', 'Székesfehérvár', '1914', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '41', 'Pécs', '1715', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '89', 'Szeged', '6918', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '150', 'Szeged', '7103', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Kossuth Lajos utca', '57', 'Debrecen', '1822', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '7', 'Szombathely', '2137', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '166', 'Gyõr', '3344', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Ady Endre utca', '175', 'Szeged', '7452', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '175', 'Szeged', '1678', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '184', 'Szombathely', '9658', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '29', 'Kecskemét', '9527', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '93', 'Budapest', '7302', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '14', 'Budapest', '3382', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '79A', 'Debrecen', '6659', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '74', 'Székesfehérvár', '7359', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Petõfi Sándor utca', '83', 'Debrecen', '1236', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '38', 'Székesfehérvár', '6115', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '95', 'Nyíregyháza', '6782', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '77', 'Nyíregyháza', '5617', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '155', 'Szeged', '6311', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '87', 'Debrecen', '4904', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Rákóczi út', '19', 'Debrecen', '9141', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Arany János utca', '145', 'Nyíregyháza', '6687', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Vörösmarty utca', '164B', 'Szombathely', '3065', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Széchenyi István tér', '89', 'Nyíregyháza', '4732', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Deák Ferenc tér', '109', 'Budapest', '2045', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '92', 'Kecskemét', '1716', 'Magyarország');
+INSERT INTO CIM (Utca, Hazszam, Varos, Iranyitoszam, Orszag) VALUES ('Bartók Béla út', '37C', 'Gyõr', '7161', 'Magyarország');

@@ -1,0 +1,236 @@
+#ChatGPT-nek beadott prompt:
+
+Kérlek, generálj 100 rekordnyi szintetikus adatot az AUTO táblához az alábbi struktúra alapján:
+
+CREATE TABLE UGYFEL (
+    UgyfelID INT IDENTITY(1,1) PRIMARY KEY,
+    Nev NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(255) NOT NULL UNIQUE,
+    Telefonszam NVARCHAR(20),
+    LakcimID INT NOT NULL,
+    AutoId INT NOT NULL
+);
+
+Követelmények:
+- A nevek legyenek változatosak és valósághűek
+- Az email címek legyenek változatosak és valósághűek
+- A telefonszámok legyenek változatosak és valósághűek
+- A LakcimID-k legyenek számok 1-től 100-ig
+- Az AutoID-k legyenek számok 1-től 100-ig
+
+Kérlek, a kimenet SQL INSERT utasítások formájában legyen, például:
+
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Lakatos Brendon', 'brendon.lakatos@yahoo.com', '+36203457890', 1, 1);
+
+#Azurba ez a rész került futtatásra:
+
+CREATE TABLE UGYFEL (
+    UgyfelID INT IDENTITY(1,1) PRIMARY KEY,
+    Nev NVARCHAR(100) NOT NULL,
+    Email NVARCHAR(255) NOT NULL UNIQUE,
+    Telefonszam NVARCHAR(20),
+    LakcimID INT NOT NULL,
+    AutoId INT NOT NULL
+);
+
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kovács Gábor', 'gabor.kovacs@example.com', '+36123456789', 1, 1);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Ágnes', 'agnes.nagy@example.com', '+36201234567', 2, 2);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Tóth István', 'istvan.toth@example.com', '+36701234567', 3, 3);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szabó Eszter', 'eszter.szabo@example.com', '+36301234567', 4, 4);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kiss Tamás', 'tamas.kiss@example.com', '+36401234567', 5, 5);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Molnár Anna', 'anna.molnar@example.com', '+36501234567', 6, 6);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Farkas Péter', 'peter.farkas@example.com', '+36601234567', 7, 7);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Varga László', 'laszlo.varga@example.com', '+36701234567', 8, 8);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Balogh Katalin', 'katalin.balogh@example.com', '+36801234567', 9, 9);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Juhász Zoltán', 'zoltan.juhasz@example.com', '+36901234567', 10, 10);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Lakatos Mária', 'maria.lakatos@example.com', '+36102345678', 11, 11);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Hegedűs Gergely', 'gergely.hegedus@example.com', '+36202345678', 12, 12);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Simon Andrea', 'andrea.simon@example.com', '+36302345678', 13, 13);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nemes Krisztina', 'krisztina.nemes@example.com', '+36402345678', 14, 14);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Török Attila', 'attila.torok@example.com', '+36502345678', 15, 15);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szűcs Erika', 'erika.szucs@example.com', '+36602345678', 16, 16);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Gál Ferenc', 'ferenc.gal@example.com', '+36702345678', 17, 17);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Bognár Anikó', 'aniko.bognar@example.com', '+36802345678', 18, 18);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Vörös Gábor', 'gabor.voros@example.com', '+36902345678', 19, 19);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pataki Emese', 'emese.pataki@example.com', '+36112345678', 20, 20);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Oláh Lajos', 'lajos.olah@example.com', '+36212345678', 21, 21);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kovács Noémi', 'noemi.kovacs@example.com', '+36312345678', 22, 22);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Béla', 'bela.nagy@example.com', '+36412345678', 23, 23);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Tóth Anett', 'anett.toth@example.com', '+36512345678', 24, 24);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szabó Róbert', 'robert.szabo@example.com', '+36612345678', 25, 25);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kiss Réka', 'reka.kiss@example.com', '+36712345678', 26, 26);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Molnár Edit', 'edit.molnar@example.com', '+36812345678', 27, 27);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Farkas Dóra', 'dora.farkas@example.com', '+36912345678', 28, 28);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Varga Norbert', 'norbert.varga@example.com', '+36122345678', 29, 29);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Balogh Gábor', 'balogh.gabor@example.com', '+36222345678', 30, 30);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Juhász Péter', 'peter.juhasz@example.com', '+36333445566', 31, 31);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szilágyi István', 'istvan.szilagyi@example.com', '+36198765432', 32, 32);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Horváth Ágnes', 'agnes.horvath@example.com', '+36211223344', 33, 33);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Németh Attila', 'attila.nemeth@example.com', '+36789998888', 34, 34);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pintér Kata', 'kata.pinter@example.com', '+36880011000', 35, 35);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Gulyás László', 'laszlo.gulyas@example.com', '+36110293847', 36, 36);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Takács Enikő', 'eniko.takacs@example.com', '+36282736445', 37, 37);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Rácz Gábor', 'gabor.racz@example.com', '+36301478521', 38, 38);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kerekes Márta', 'marta.kerekes@example.com', '+36445678900', 39, 39);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Boros Zoltán', 'zoltan.boros@example.com', '+36523456789', 40, 40);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Vass Mónika', 'monika.vass@example.com', '+36687654321', 41, 41);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pál József', 'jozsef.pal@example.com', '+36799887766', 42, 42);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Orbán Adrienn', 'adrienn.orban@example.com', '+36876543210', 43, 43);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Dudás Kálmán', 'kalman.dudas@example.com', '+36112332123', 44, 44);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Veres Lili', 'lili.veres@example.com', '+36221212121', 45, 45);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Császár Róbert', 'robert.csaszar@example.com', '+36333344455', 46, 46);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Kriszta', 'kriszta.nagy@example.com', '+36456677889', 47, 47);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Jakab Dániel', 'daniel.jakab@example.com', '+36512121212', 48, 48);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Papp Bence', 'bence.papp@example.com', '+36678965432', 49, 49);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Fodor Beáta', 'beata.fodor@example.com', '+36787654321', 50, 50);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kovács Gábor', 'gabor.kovacs1@example.com', '+36123456790', 51, 51);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Ágnes', 'agnes.nagy1@example.com', '+36201234568', 52, 52);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Tóth István', 'istvan.toth1@example.com', '+36701234568', 53, 53);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szabó Eszter', 'eszter.szabo1@example.com', '+36301234568', 54, 54);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kiss Tamás', 'tamas.kiss1@example.com', '+36401234568', 55, 55);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Molnár Anna', 'anna.molnar1@example.com', '+36501234568', 56, 56);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Farkas Péter', 'peter.farkas1@example.com', '+36601234568', 57, 57);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Varga László', 'laszlo.varga1@example.com', '+36701234568', 58, 58);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Balogh Katalin', 'katalin.balogh1@example.com', '+36801234568', 59, 59);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Juhász Zoltán', 'zoltan.juhasz1@example.com', '+36901234568', 60, 60);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Lakatos Mária', 'maria.lakatos1@example.com', '+36102345679', 61, 61);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Hegedűs Gergely', 'gergely.hegedus1@example.com', '+36202345679', 62, 62);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Simon Andrea', 'andrea.simon1@example.com', '+36302345679', 63, 63);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nemes Krisztina', 'krisztina.nemes1@example.com', '+36402345679', 64, 64);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Török Attila', 'attila.torok1@example.com', '+36502345679', 65, 65);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szűcs Erika', 'erika.szucs1@example.com', '+36602345679', 66, 66);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Gál Ferenc', 'ferenc.gal1@example.com', '+36702345679', 67, 67);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Bognár Anikó', 'aniko.bognar1@example.com', '+36802345679', 68, 68);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Vörös Gábor', 'gabor.voros1@example.com', '+36902345679', 69, 69);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pataki Emese', 'emese.pataki1@example.com', '+36112345679', 70, 70);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Oláh Lajos', 'lajos.olah1@example.com', '+36212345679', 71, 71);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kovács Noémi', 'noemi.kovacs1@example.com', '+36312345679', 72, 72);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Béla', 'bela.nagy1@example.com', '+36412345679', 73, 73);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Tóth Anett', 'anett.toth1@example.com', '+36512345679', 74, 74);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szabó Róbert', 'robert.szabo1@example.com', '+36612345679', 75, 75);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kiss Réka', 'reka.kiss1@example.com', '+36712345679', 76, 76);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Molnár Edit', 'edit.molnar1@example.com', '+36812345679', 77, 77);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Farkas Dóra', 'dora.farkas1@example.com', '+36912345679', 78, 78);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Varga Norbert', 'norbert.varga1@example.com', '+36122345679', 79, 79);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Balogh Gábor', 'balogh.gabor1@example.com', '+36222345679', 80, 80);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Juhász Péter', 'peter.juhasz1@example.com', '+36333445567', 81, 81);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Szilágyi István', 'istvan.szilagyi1@example.com', '+36198765433', 82, 82);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Horváth Ágnes', 'agnes.horvath1@example.com', '+36211223345', 83, 83);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Németh Attila', 'attila.nemeth1@example.com', '+36789998889', 84, 84);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pintér Kata', 'kata.pinter1@example.com', '+36880011001', 85, 85);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Gulyás László', 'laszlo.gulyas1@example.com', '+36110293848', 86, 86);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Takács Enikő', 'eniko.takacs1@example.com', '+36282736446', 87, 87);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Rácz Gábor', 'gabor.racz1@example.com', '+36301478522', 88, 88);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Kerekes Márta', 'marta.kerekes1@example.com', '+36445678901', 89, 89);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Boros Zoltán', 'zoltan.boros1@example.com', '+36523456790', 90, 90);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Vass Mónika', 'monika.vass1@example.com', '+36687654322', 91, 91);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Pál József', 'jozsef.pal1@example.com', '+36799887767', 92, 92);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Orbán Adrienn', 'adrienn.orban1@example.com', '+36876543211', 93, 93);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Dudás Kálmán', 'kalman.dudas1@example.com', '+36112332124', 94, 94);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Veres Lili', 'lili.veres1@example.com', '+36221212122', 95, 95);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Császár Róbert', 'robert.csaszar1@example.com', '+36333344456', 96, 96);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Nagy Kriszta', 'kriszta.nagy1@example.com', '+36456677890', 97, 97);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Jakab Dániel', 'daniel.jakab1@example.com', '+36512121213', 98, 98);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Papp Bence', 'bence.papp1@example.com', '+36678965433', 99, 99);
+INSERT INTO UGYFEL (Nev, Email, Telefonszam, LakcimID, AutoId) 
+VALUES ('Fodor Beáta', 'beata.fodor1@example.com', '+36787654322', 100, 100);

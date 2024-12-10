@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=cherrypicking.database.windows.net;Initial Catalog=Cherry;User ID=hallgato;Password=Password123;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Cherry
